@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    window.onload = init;
+//    console.log("0000");
+    function  init (){
+        setInterval("star()",1000);
+//        console.log("11111");
+    }
+    function star() {
+//        console.log("2222");
+        //创建
+        var obj = document.createElement("img");
+        //给属性
+        obj.src = "images/bird.png";
+        //随机大小
+        var w = Math.floor(Math.random()*80+21);
+        obj.width = w;
+//        obj.width = Math.floor(Math.random()*80+21);
+        //随机位置
+        var x = Math.floor(Math.random()*1356+5);
+        var y = Math.floor(Math.random()*506+10);
+        //给个定位先
+        obj.style.position = "absolute";
+        obj.style.top = y+"px";
+        obj.style.left =x + "px";
+        //双击关闭
+        obj.ondblclick = function () {
+            document.body.removeChild(this);//window下
+//            this.parentNode.removeChild(this);
+        }
+        //放入body中
+        document.body.appendChild(obj);
+    }
+
+
+</script>
+
+
+
+
+
+
+<script>
+    //    window.onload = init;
+    //    function init(){
+    //        setInterval(function  () {
+    //            //创建
+    //            var obj = document.createElement("img");
+    //            //加属性
+    //            obj.src = "images/bird.png";
+    //            document.body.appendChild(obj);
+    //        },1000);
+    //    }
+</script>
+<script>
+//    window.onload = init;
+//    //    console.log("1234");
+//    function init() {
+//        window.setInterval("star()", 1000);
+////        console.log("111");
+//    }
+//    function star() {
+////        console.log("222");
+//        //创建
+//        var obj = document.createElement("img");
+//        //加属性
+//        obj.src = "images/bird.png";
+//        //随机大小
+//        var w = Math.floor(Math.random() * 81 + 20);
+//        obj.width = w;
+//        //随机位置
+//        var x = Math.floor(Math.random() * 1346 + 10);
+//        var y = Math.floor(Math.random() * 506 + 10);
+//        //给个定位先
+//        obj.style.position = "absolute";
+//        obj.style.top = y + "px";
+//        obj.style.left = x + "px";
+//        //双击关闭
+//        obj.ondblclick = function () {
+//            window.document.body.removeChild(this);//window去掉
+////            this.parentNode.removeChild(this);
+//        }
+//        //放入body
+//        document.body.appendChild(obj);
+//    }
+</script>
+
+</body>
+</html>
